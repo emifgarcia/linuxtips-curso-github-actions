@@ -1,3 +1,3 @@
 # linuxtips-curso-github-actions
 
-## Estou editan doeste arquivo com Vscode!
+## Estou editando este arquivo com Vscode!
