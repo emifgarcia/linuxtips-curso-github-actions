@@ -20,6 +20,11 @@ jobs:
 
       - name: Listar arquivos
         run: ls -l
+
+      - uses: actions/upload-artifact@v7  
+        with:
+          name: strigus
+          path: arquivo.txt
   
   giropops_2:
     runs-on: ubuntu-latest
@@ -29,6 +34,17 @@ jobs:
 
       - name: Listar arquivos
         run: ls -l
+      
+      - uses: actions/download-artifact@v8
+        with:
+          name: strigus
+          path: arquivo.txt
+
+      - name: Listar arquivos diretorio strigus
+        run: ls -l strigus/
+
+      - name: Mover arquivo
+        run: mv strigus/arquivo.txt . && rm -rf strigus
 
       - name: Ler arquivo
         run: cat arquivo.txt
