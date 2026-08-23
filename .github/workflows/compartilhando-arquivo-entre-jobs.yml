@@ -44,7 +44,7 @@ jobs:
       - name: Diretório de trabalho
         run: pwd
 
-      - name: Listar arquivos diretorio strigus
+      - name: Listar arquivos apos download
         run: ls -l
 
       - name: Ler arquivo
