@@ -41,6 +41,9 @@ jobs:
           name: strigus
           path: .
 
+      - name: Diretório de trabalho
+        run: pwd
+
       - name: Listar arquivos diretorio strigus
         run: ls -l
 
