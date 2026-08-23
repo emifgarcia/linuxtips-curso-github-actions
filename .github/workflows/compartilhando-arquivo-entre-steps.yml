@@ -1,0 +1,22 @@
+name: Compartilhando arquivo entre steps
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  giropops:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confere versao do ubuntu
+        run: cat /etc/os-release
+
+      - name: Diretório de trabalho
+        run: pwd
+
+      - name: Criar arquivo
+        run: echo "Meu primeiro arquivo" > arquivo.txt
+
+      - name: Listar arquivos
+        run: ls -l
