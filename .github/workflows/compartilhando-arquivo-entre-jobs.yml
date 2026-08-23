@@ -39,7 +39,7 @@ jobs:
       - uses: actions/download-artifact@v8
         with:
           name: strigus
-          path: arquivo.txt
+          path: .
 
       - name: Listar arquivos diretorio strigus
         run: ls -l strigus/
