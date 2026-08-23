@@ -42,10 +42,7 @@ jobs:
           path: .
 
       - name: Listar arquivos diretorio strigus
-        run: ls -l strigus/
-
-      - name: Mover arquivo
-        run: mv strigus/arquivo.txt . && rm -rf strigus
+        run: ls -l
 
       - name: Ler arquivo
         run: cat arquivo.txt
