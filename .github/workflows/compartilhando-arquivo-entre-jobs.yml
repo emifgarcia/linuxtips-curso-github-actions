@@ -1,0 +1,34 @@
+name: Compartilhando arquivo entre jobs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  giropops_1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confere versao do ubuntu
+        run: cat /etc/os-release
+
+      - name: Diretório de trabalho
+        run: pwd
+
+      - name: Criar arquivo
+        run: echo "Meu primeiro arquivo" > arquivo.txt
+
+      - name: Listar arquivos
+        run: ls -l
+  
+  giropops_2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Diretório de trabalho
+        run: pwd
+
+      - name: Listar arquivos
+        run: ls -l
+
+      - name: Ler arquivo
+        run: cat arquivo.txt
