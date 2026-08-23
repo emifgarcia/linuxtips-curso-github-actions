@@ -28,6 +28,7 @@ jobs:
   
   giropops_2:
     runs-on: ubuntu-latest
+    needs: giropops_1
     steps:
       - name: Diretório de trabalho
         run: pwd
