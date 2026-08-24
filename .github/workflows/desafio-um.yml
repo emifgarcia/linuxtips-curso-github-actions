@@ -7,10 +7,10 @@ on:
 
 jobs:
   download-image-docker:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Download Image Docker
-      run: docker pull hello-world
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Image Docker
+        run: docker pull hello-world
     
-    - name: Image List
-      run: docker images
+      - name: Image List
+        run: docker images
