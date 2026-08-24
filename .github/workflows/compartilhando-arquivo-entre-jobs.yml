@@ -1,9 +1,7 @@
 name: Compartilhando arquivo entre jobs
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   giropops_1:
