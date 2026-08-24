@@ -1,0 +1,19 @@
+name: desafio-um
+
+on:
+  workflow_dispatch:
+    inputs:
+      imagem:
+        description: 'Informe a imagem Docker com a tag. Ex: nginx:latest'
+        required: true
+        type: string
+
+jobs:
+  download-image-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Image Docker
+        run: docker pull ${{ inputs.imagem }}
+    
+      - name: Image List
+        run: docker images
